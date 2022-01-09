@@ -1,27 +1,31 @@
 import React from "react";
 import "./App.css";
-import Posts from "./components/posts.components";
-import data from "./data.json";
+import Posts from "./posts";
 import Navbar from "./components/navbar.components";
+import AddNewPost from "./components/addNew.components";
 class App extends React.Component {
   state = {
-    Posts: data,
+    like: 0,
+    dislike: 0,
   };
+  handleLike = () => {
+    this.setState({ like: this.state.like + 1 });
+  };
+  handledislike = () => {
+    this.setState({ dislike: this.state.dislike + 1 });
+  };
+
   render() {
+    const { like, dislike } = this.state;
     return (
       <>
-        <Navbar />
+        <Navbar like={like} dislike={dislike} />
         <div className="container mainContent">
-          {this.state.Posts.map((value) => {
-            return (
-              <Posts
-                title={value.title}
-                date={value.date}
-                description={value.description}
-                key={value.id}
-              />
-            );
-          })}
+          <AddNewPost />
+          <Posts
+            handlelike={this.handleLike}
+            handledislike={this.handledislike}
+          />
         </div>
       </>
     );

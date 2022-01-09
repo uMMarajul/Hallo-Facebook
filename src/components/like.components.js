@@ -2,9 +2,13 @@ import React from "react";
 
 class Like extends React.Component {
   state = {
-    like: false,
+    like: this.props.islike,
   };
-  handleLike = () => this.setState({ like: !this.state.like });
+  handleLike = () => {
+    this.setState({ like: !this.state.like });
+    // console.log(this.props.handlelike);
+    this.props.handlelike();
+  };
   render() {
     return (
       <button

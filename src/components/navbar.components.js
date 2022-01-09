@@ -7,6 +7,10 @@ class Navbar extends React.Component {
         <div className="navbar-brand mx-3">
           <span className="badge bg-primary">Hello facebook</span>
         </div>
+        <p className="m-2">
+          Like: <span className="badge bg-primary">{this.props.like}</span>{" "}
+          Dislike:<span className="badge bg-primary">{this.props.dislike}</span>{" "}
+        </p>
       </nav>
     );
   }
