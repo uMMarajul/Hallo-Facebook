@@ -1,23 +1,24 @@
-import React from "react";
+const Dislike = (props) => {
+  const { islike: like, id, handledislike } = props;
 
-class Dislike extends React.Component {
-  state = {
-    like: false,
+  const clickdilike = () => {
+    if (like === 2) {
+      handledislike(id, 0);
+    } else {
+      handledislike(id, 2);
+    }
+    // this.setState({ like: !this.state.like });
+    // console.log(this.props.handlelike);
   };
-  handleLike = () => {
-    this.setState({ like: !this.state.like });
-    this.props.handledislike();
-  };
-  render() {
-    return (
-      <button
-        onClick={this.handleLike}
-        className={"btn " + (this.state.like ? "btn-danger" : "btn-primary")}
-      >
-        <i className="fa fa-thumbs-down"></i>
-      </button>
-    );
-  }
-}
+
+  return (
+    <button
+      onClick={clickdilike}
+      className={"btn " + (like === 2 ? "btn-primary" : "btn-light")}
+    >
+      <i className="fa fa-thumbs-down"></i>
+    </button>
+  );
+};
 
 export default Dislike;

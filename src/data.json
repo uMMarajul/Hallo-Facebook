@@ -12,6 +12,7 @@
     "title": "React Explained in Fewer than 140 Characters",
     "date": "2 December 2021 | 10:10PM",
     "description": "Nam vulputate ligula eget facilisis gravida. Vestibulum feugiat sit amet augue nec accumsan. Aenean lacinia, lacus id rhoncus malesuada, nunc orci pulvinar justo, quis volutpat tellus magna ut orci. Cras dictum eget dui nec consequat. Mauris lobortis tincidunt libero. Phasellus in placerat est, non lobortis massa. Praesent risus augue, hendrerit at sagittis eu, ultricies et enim. Mauris purus risus, mollis in dapibus non, tempor vel mi.",
+    "image": "./Assets/",
     "islike": 0
   },
   {
@@ -19,13 +20,15 @@
     "title": "How Successful People Make the Most of Their React",
     "date": "1 January 2022 | 10:10PM",
     "description": "Curabitur mattis justo sed mattis blandit. Cras pharetra, velit nec pretium interdum, mauris risus congue magna, vel placerat mauris eros quis urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nibh est, fringilla in porta vel, tempor sit amet risus. Pellentesque accumsan viverra magna, porttitor tempus dolor volutpat a. ",
-    "islike": 0
+    "image": "./Assets/",
+    "islike": 1
   },
   {
     "id": 4,
     "title": "Go to Hell",
     "date": "1 January 2022 | 10:10PM",
     "description": "Nullam sed pellentesque elit, auctor euismod ante. Fusce quis ligula neque. Pellentesque quis velit odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas non elit sed odio sodales mollis at vitae elit. Nullam et accumsan elit. Ut convallis dui erat, non egestas leo convallis quis. Etiam consequat semper ante, in luctus quam elementum sit amet.",
+    "image": "./Assets/",
     "islike": 0
   }
 ]
