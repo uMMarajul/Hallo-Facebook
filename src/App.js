@@ -40,12 +40,24 @@ class App extends React.Component {
     console.log("OK");
     const data = [...this.state.posts];
     const newdata = data.filter((data) => data.id !== id);
-    // console.log(newdata);
-
     this.setState({ posts: newdata });
-    // console.log(this.state.Posts);
   };
 
+  handleCreatNewPost = (title, post) => {
+    const prePost = [...this.state.posts];
+    const last_id = prePost[prePost.length - 1].id;
+    const time = "1 January 2022 | 10:10PM";
+    prePost.push({
+      id: last_id + 1,
+      title: title,
+      date: time,
+      description: post,
+      image: "./Assets/",
+      islike: 0,
+    });
+    console.log(prePost);
+    this.setState({ posts: prePost });
+  };
   render() {
     const { like, dislike } = this.state;
     return (
@@ -56,7 +68,7 @@ class App extends React.Component {
           countLikeDislike={this.countLikeDislike}
         />
         <div className="container mainContent">
-          {/* <AddNewPost /> */}
+          <AddNewPost handleCreatNewPost={this.handleCreatNewPost} />
           <Posts
             handlelike={this.handleLike}
             Posts={this.state.posts}
